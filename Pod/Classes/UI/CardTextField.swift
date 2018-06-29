@@ -500,18 +500,18 @@ open class CardTextField: UITextField, NumberInputTextFieldDelegate {
     }
     
     open func numberInputTextFieldDidComplete(_ numberInputTextField: NumberInputTextField) {
-        moveCardNumberOutAnimated()
-        
-        notifyDelegate()
-        hideExpiryTextFields = !cardTypeRegister.cardType(for: numberInputTextField.cardNumber).requiresExpiry
-        hideCVCTextField = !cardTypeRegister.cardType(for: numberInputTextField.cardNumber).requiresCVC
-        if hideExpiryTextFields && hideCVCTextField {
-            return
-        } else if hideExpiryTextFields {
-            cvcTextField.becomeFirstResponder()
-        } else {
-            monthTextField?.becomeFirstResponder()
-        }
+//        moveCardNumberOutAnimated()
+//
+//        notifyDelegate()
+//        hideExpiryTextFields = !cardTypeRegister.cardType(for: numberInputTextField.cardNumber).requiresExpiry
+//        hideCVCTextField = !cardTypeRegister.cardType(for: numberInputTextField.cardNumber).requiresCVC
+//        if hideExpiryTextFields && hideCVCTextField {
+//            return
+//        } else if hideExpiryTextFields {
+//            cvcTextField.becomeFirstResponder()
+//        } else {
+//            monthTextField?.becomeFirstResponder()
+//        }
     }
     
     // MARK: - Card 

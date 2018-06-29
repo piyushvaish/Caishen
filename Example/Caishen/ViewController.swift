@@ -32,6 +32,7 @@ class ViewController: UIViewController, CardTextFieldDelegate, CardIOPaymentView
     // This method of `CardNumberTextFieldDelegate` will set the saveButton enabled or disabled, based on whether valid card information has been entered.
     func cardTextField(_ cardTextField: CardTextField, didEnterCardInformation information: Card, withValidationResult validationResult: CardValidationResult) {
             buyButton?.isEnabled = validationResult == .Valid
+            print(information.bankCardNumber)
     }
     
     func cardTextFieldShouldShowAccessoryImage(_ cardTextField: CardTextField) -> UIImage? {
